@@ -19,12 +19,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
   final Color verde = const Color(0xFFC6FF00);
 
   Future<void> register() async {
-
-  Navigator.pushReplacementNamed(
-    context,
-    '/objective',
-  );
-
+  if (_formKey.currentState!.validate()) {
+    Navigator.pushReplacementNamed(
+      context,
+      '/objective',
+    );
+  }
 }
 
   @override

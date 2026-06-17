@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'screens/splash_screen.dart';
 import 'screens/login_screen.dart';
 import 'screens/register_screen.dart';
@@ -13,7 +14,6 @@ import 'screens/profile_screen.dart';
 import 'screens/notification_settings_screen.dart';
 import 'theme/app_theme.dart';
 
-
 void main() {
   runApp(const FitPlanApp());
 }
@@ -27,10 +27,13 @@ class FitPlanApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'FITPLAN',
       theme: AppTheme.darkTheme,
-      initialRoute: '/splash',
+
+      // 🔥 PARA TESTE (pode trocar depois)
+      initialRoute: '/register',
+
       routes: {
         '/splash': (context) => const SplashScreen(),
-        '/login': (context) => LoginScreen(),
+        '/login': (context) => const LoginScreen(),
         '/register': (context) => const RegisterScreen(),
         '/objective': (context) => const ObjectiveScreen(),
         '/days': (context) => const DaysPerWeekScreen(),
